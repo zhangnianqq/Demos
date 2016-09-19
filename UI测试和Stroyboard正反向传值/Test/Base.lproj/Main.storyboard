@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hcz-mQ-oDd">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MainViewController-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SU1-dn-438">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="5SJ-RW-eEX"/>
+                                    <constraint firstAttribute="height" constant="40" id="NxV-j7-Xho"/>
+                                </constraints>
+                                <state key="normal" title="跳转"/>
+                                <connections>
+                                    <segue destination="cGb-gN-rTJ" kind="push" identifier="MainPushSub" id="yiH-HX-ZeJ"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="123" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QIk-ID-Vdp">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="7N4-B0-MsX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="QIk-ID-Vdp" firstAttribute="top" secondItem="SU1-dn-438" secondAttribute="bottom" constant="44" id="3a1-7d-yYs"/>
+                            <constraint firstItem="SU1-dn-438" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jjq-qd-0l3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QIk-ID-Vdp" secondAttribute="trailing" id="bZ0-hC-sDV"/>
+                            <constraint firstItem="QIk-ID-Vdp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="fFa-Yg-Ywe"/>
+                            <constraint firstItem="SU1-dn-438" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="104" id="joe-RE-yFn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="MainViewController" id="St4-xK-Z0z"/>
+                    <connections>
+                        <outlet property="inputTextField" destination="QIk-ID-Vdp" id="gke-eS-G6B"/>
+                        <outlet property="jumpButton" destination="SU1-dn-438" id="KQA-Qv-LTU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="668" y="-6.746626686656672"/>
+        </scene>
+        <!--SubViewControllre-->
+        <scene sceneID="9Mk-wW-Wrc">
+            <objects>
+                <viewController id="cGb-gN-rTJ" customClass="SubViewController" customModule="Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bvm-JH-Hfs"/>
+                        <viewControllerLayoutGuide type="bottom" id="AjX-Yv-m1Z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xMZ-Bc-8Zv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="12345" translatesAutoresizingMaskIntoConstraints="NO" id="0Ic-OT-5a2">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="uIM-uk-2k8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWR-D2-wzz" userLabel="返回">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="BdX-iV-p2y"/>
+                                    <constraint firstAttribute="width" constant="100" id="Yrf-0w-M1O"/>
+                                </constraints>
+                                <state key="normal" title="跳回"/>
+                                <connections>
+                                    <segue destination="fmW-Lw-Ndk" kind="unwind" identifier="subPopMain" unwindAction="closeWithSegue:" id="EjD-FG-coC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0Ic-OT-5a2" firstAttribute="leading" secondItem="xMZ-Bc-8Zv" secondAttribute="leadingMargin" id="EVi-o3-MdC"/>
+                            <constraint firstItem="iWR-D2-wzz" firstAttribute="centerX" secondItem="xMZ-Bc-8Zv" secondAttribute="centerX" id="FAC-m0-hei"/>
+                            <constraint firstItem="0Ic-OT-5a2" firstAttribute="top" secondItem="bvm-JH-Hfs" secondAttribute="bottom" constant="44" id="Ve0-bv-5Jq"/>
+                            <constraint firstItem="iWR-D2-wzz" firstAttribute="top" secondItem="0Ic-OT-5a2" secondAttribute="bottom" constant="100" id="eEw-6w-S7p"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0Ic-OT-5a2" secondAttribute="trailing" id="raK-SE-4Tc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="SubViewControllre" id="lEO-sB-00Q"/>
+                    <connections>
+                        <outlet property="JumpBackButton" destination="iWR-D2-wzz" id="pBa-Bl-Asz"/>
+                        <outlet property="outTextField" destination="0Ic-OT-5a2" id="cnI-uY-kjl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fuU-6f-1TU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="fmW-Lw-Ndk" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1431" y="-8"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lZS-Y6-AG9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hcz-mQ-oDd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wch-N4-ulo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="4Ou-P1-1SS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j6Z-Wb-kRR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-271.19999999999999" y="-6.746626686656672"/>
+        </scene>
+    </scenes>
+</document>
