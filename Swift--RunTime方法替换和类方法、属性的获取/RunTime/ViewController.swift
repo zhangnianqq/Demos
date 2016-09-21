@@ -16,7 +16,10 @@ class TestSwiftClass {
     var name:String = "Dylan"
     var cars:AnyObject! = nil
     
-    func sayHello(name:String)  {
+    //此处因为没有继承nsobject 所以默认获取不到 但如过手动加上@objc就可以获取到
+    //注意 1、 此时是类没有继承nsobject 所以添加关键字@objc
+    //注意 2、如果类继承自nsobject，自定义要被替换掉的方法，如果直接写关键字@objc是没用的，需要添加dynamic， 此关键字的作用是隐式添加@objc 关键字。
+    @objc func sayHello(name:String)  {
         print("F\(#function),L\(#line)")
     }
 }
@@ -27,10 +30,6 @@ class ViewController: UIViewController {
     var name:String = "Dylan"
     var cars:AnyObject! = nil
     
-
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -39,6 +38,7 @@ class ViewController: UIViewController {
 //        getMethodAndPropertiseFromClass(cls: TestSwiftClass.self)
         //继承NSObject 的类 走运行时机制
 //        getMethodAndPropertiseFromClass(cls: ViewController.self)
+        
         swizzleMethod(cls: ViewController.self, originMethod: #selector(ViewController.viewDidAppear(_:)), destinationMethod: #selector(ViewController.my_viewDidAppear(_:)))
         swizzleMethod(cls: ViewController.self, originMethod: #selector(ViewController.returnInt(value:)), destinationMethod: #selector(ViewController.my_returnInt(value:)))
         
@@ -110,7 +110,7 @@ class ViewController: UIViewController {
         }
     }
     
-    
+    //那个类的方法替换
     func swizzleMethod(cls:AnyClass!, originMethod:Selector, destinationMethod:Selector) {
         //class_getInstanceMethod 获取对象方法
         //class_getClassMethod  获取类方法
