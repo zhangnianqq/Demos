@@ -11,12 +11,12 @@
 import UIKit
 
 class TestSwiftClass {
-    var sex:Bool = true
+    @objc var sex:Bool = true
     var age:Int = 22
     var name:String = "Dylan"
     var cars:AnyObject! = nil
     
-    //此处因为没有继承nsobject 所以默认获取不到 但如过手动加上@objc就可以获取到
+    //此处因为没有继承nsobject 所以默认获取不到 但如过手动加上@objc就可以获取到 方法和属性同样
     //注意 1、 此时是类没有继承nsobject 所以添加关键字@objc
     //注意 2、如果类继承自nsobject，自定义要被替换掉的方法，如果直接写关键字@objc是没用的，需要添加dynamic， 此关键字的作用是隐式添加@objc 关键字。
     @objc func sayHello(name:String)  {
