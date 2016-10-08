@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F56596B1DA8F1FF00AF82DE /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F56596A1DA8F1FF00AF82DE /* LeftViewController.swift */; };
 		5FD781EA1D9C9B1600D8B749 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD781E91D9C9B1600D8B749 /* AppDelegate.swift */; };
 		5FD781EC1D9C9B1600D8B749 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD781EB1D9C9B1600D8B749 /* ViewController.swift */; };
 		5FD781EF1D9C9B1600D8B749 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FD781ED1D9C9B1600D8B749 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F56596A1DA8F1FF00AF82DE /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
 		5FD781E61D9C9B1600D8B749 /* QQKuangjia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QQKuangjia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FD781E91D9C9B1600D8B749 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5FD781EB1D9C9B1600D8B749 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			children = (
 				5FD781E91D9C9B1600D8B749 /* AppDelegate.swift */,
 				5FD781EB1D9C9B1600D8B749 /* ViewController.swift */,
+				5F56596A1DA8F1FF00AF82DE /* LeftViewController.swift */,
 				5FD781ED1D9C9B1600D8B749 /* Main.storyboard */,
 				5FD781FD1D9C9C8A00D8B749 /* Common.swift */,
 				5FD781FB1D9C9C1100D8B749 /* HomeViewController.swift */,
@@ -146,6 +149,7 @@
 				5FD781FE1D9C9C8A00D8B749 /* Common.swift in Sources */,
 				5FD781EC1D9C9B1600D8B749 /* ViewController.swift in Sources */,
 				5FD781EA1D9C9B1600D8B749 /* AppDelegate.swift in Sources */,
+				5F56596B1DA8F1FF00AF82DE /* LeftViewController.swift in Sources */,
 				5FD781FC1D9C9C1100D8B749 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,6 +314,7 @@
 				5FD781FA1D9C9B1600D8B749 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,6 +7,11 @@
 //
 
 import UIKit
+//侧边栏滑动样式
+enum SideSlipStyle:NSInteger {
+    case None           //平移
+    case Narrow         //主视图缩小
+}
 
 class ViewController: UIViewController {
     //主视图
@@ -14,16 +19,33 @@ class ViewController: UIViewController {
         let homeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
         return homeVC
     }()
+    var leftViewController:LeftViewController = {
+        let leftVC = UIStoryboard(name: "Left", bundle: nil).instantiateViewController(withIdentifier: "LeftViewController") as! LeftViewController
+        return leftVC
+    }()
     var distance:CGFloat = 0                    //距离
     
     //常量
     let kFullDistance:CGFloat = 0.78            //完整距离
-    let kProportion:CGFloat = 0.77              //比例
+    var kProportion:CGFloat = 1              //比例
+    //侧边栏滑动样式 滑动样式设置 默认为 平移
+    var sideSlipStyle:SideSlipStyle = SideSlipStyle.None {
+        willSet {
+            if newValue == SideSlipStyle.None {
+                kProportion = 1
+            }else {
+                kProportion = 0.77
+            }
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        //设置侧边栏滑动样式
+        sideSlipStyle = SideSlipStyle.None
         //给主视图设置背景图
         let imageView = UIImageView(image: UIImage(named: "back"))
         imageView.frame = UIScreen.main.bounds
