@@ -19,12 +19,8 @@ class ViewController: UIViewController {
         let homeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
         return homeVC
     }()
-    var leftViewController:LeftViewController = {
-        let leftVC = UIStoryboard(name: "Left", bundle: nil).instantiateViewController(withIdentifier: "LeftViewController") as! LeftViewController
-        return leftVC
-    }()
-    var distance:CGFloat = 0                    //距离
     
+    var distance:CGFloat = 0                    //距离
     //常量
     let kFullDistance:CGFloat = 0.78            //完整距离
     var kProportion:CGFloat = 1              //比例
@@ -38,6 +34,15 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    //左视图及
+    var leftViewController:LeftViewController = {
+        let leftVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LeftViewController") as! LeftViewController
+        return leftVC
+    }()
+    var centerOfLeftViewAtBeginning: CGPoint!
+    var proportionOfLeftView: CGFloat = 1
+    var distanceOfLeftView: CGFloat = 50
     
     
     override func viewDidLoad() {
