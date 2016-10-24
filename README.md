@@ -7,3 +7,6 @@
 * 5、storyboard+xib学习（tableViewCell是xib）
 * 6、Storyboard手势+xib文件调用和触发
 * 7、textFieldCell  解决cell上单个TextField问题
+* 7、QQ框架Demo
+* 8、蓝牙连接打印接Demo(已适配品牌：芝柯、斯普瑞特) 使用框架Ble 支持蓝牙4.0
+* 9、textFieldCell  解决cell上单个TextField问题
