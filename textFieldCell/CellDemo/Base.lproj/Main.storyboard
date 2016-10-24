@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ksy-7z-o3O">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--CellStyle-->
+        <scene sceneID="SRg-sZ-rig">
+            <objects>
+                <tableViewController title="CellStyle" id="Ksy-7z-o3O" customClass="TableViewController" customModule="CellDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="OIA-O1-bo3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="Ksy-7z-o3O" id="OUK-bv-qFT"/>
+                            <outlet property="delegate" destination="Ksy-7z-o3O" id="4nJ-Pe-HAQ"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="OKButton" destination="ubX-5V-pdG" id="eVd-kg-YWe"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RI1-Lc-pPx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ubX-5V-pdG">
+                    <rect key="frame" x="0.0" y="0.0" width="31" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="1" green="0.54026876563509574" blue="0.062175691353895002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="提交"/>
+                    <connections>
+                        <action selector="OKButtonClick:" destination="Ksy-7z-o3O" eventType="touchUpInside" id="4sP-5y-oM4"/>
+                    </connections>
+                </button>
+            </objects>
+            <point key="canvasLocation" x="-129" y="46"/>
+        </scene>
+    </scenes>
+</document>
